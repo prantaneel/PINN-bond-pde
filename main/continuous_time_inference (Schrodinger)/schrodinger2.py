@@ -277,6 +277,7 @@ if __name__ == "__main__":
     # creates random points of size N_f
     model = PhysicsInformedNeuralNetwork(x0, u0, v0, tb, X_f, layers, lb, ub)
 
+    #training
     start_time = time.time()
     model.train(10000)
     elapsed = time.time() - start_time
