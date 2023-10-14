@@ -1,16 +1,10 @@
-import tensorflow as tf
 import numpy as np
 
-# Create a tf.Variable
-original_variable = tf.Variable(np.array([[1], [2], [3], [4], [5]]), dtype=tf.int32)
+# Create a NumPy array with some data
+data = np.array([1, 2, 2, 3, 4, 4, 5, 5, 6])
 
-# Perform a slice operation on the variable
-sliced_variable = original_variable[1:4,:]  # Slicing from index 1 to 3
+# Use the unique function to find unique elements
+unique_elements = np.unique(data).flatten()[:, None]
 
-# Modify the sliced variable
-sliced_variable.assign(np.array([[10], [20], [30]]))
-print(type(sliced_variable))
-
-# Print the original variable and the modified sliced variable
-print("Original Variable:", original_variable.numpy())
-print("Modified Sliced Variable:", sliced_variable.numpy())
+# Print the unique elements
+print(unique_elements)
