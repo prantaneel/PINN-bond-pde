@@ -22,7 +22,7 @@ def C(a, b, sigma, s, b_sq, sig_sq, coeff, eta, eta_sq, const_a):
 
 def A(a, b, sigma, s, b_sq, sig_sq, coeff, eta, eta_sq, const_a):
     exp_term = math.exp(coeff*s)
-    a_val = (a*b_sq*s) / sig_sq + ((a*b) / sig_sq)*math.log(abs((eta_sq*exp_term)/((1 - eta*exp_term)**2))) + const_a
+    a_val = ((a*b_sq*s) / sig_sq) + ((a*b) / sig_sq)*math.log(abs((eta_sq*exp_term)/((1 - eta*exp_term)**2))) + const_a
     return a_val
 
 

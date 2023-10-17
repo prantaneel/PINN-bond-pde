@@ -276,10 +276,11 @@ if __name__ == "__main__":
     error_f = np.linalg.norm(f_star-f_pred,2)/np.linalg.norm(f_star,2)
     print('Error f: %e' % (error_f))
     
-    U_pred = griddata(X_star, f_pred.flatten(), (X, T), method='cubic')
+    
+#     U_pred = griddata(X_star, f_pred.flatten(), (X, T), method='cubic')
 
-#     FU_pred = griddata(X_star, f_u_pred.flatten(), (X, T), method='cubic')
-#     FV_pred = griddata(X_star, f_v_pred.flatten(), (X, T), method='cubic')     
+# #     FU_pred = griddata(X_star, f_u_pred.flatten(), (X, T), method='cubic')
+# #     FV_pred = griddata(X_star, f_v_pred.flatten(), (X, T), method='cubic')     
 #     ######################################################################
 #     ############################# Plotting ###############################
 #     ######################################################################    
@@ -292,7 +293,7 @@ if __name__ == "__main__":
 #     fig, ax = newfig(1.0, 0.9)
 #     ax.axis('off')
     
-#     ####### Row 0: h(t,x) ##################    
+# #     ####### Row 0: h(t,x) ##################    
 #     gs0 = gridspec.GridSpec(1, 2)
 #     gs0.update(top=1-0.06, bottom=1-1/3, left=0.15, right=0.85, wspace=0)
 #     ax = plt.subplot(gs0[:, :])
